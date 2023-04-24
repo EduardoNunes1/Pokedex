@@ -23,7 +23,6 @@ public class HomeController : Controller
     public IActionResult Details(int Numero)
     {
         var pokemon = _pokeService.GetDetailedPokemon(Numero);
-        pokemon.Tipos = _pokeService.GetTipos();
         return View(pokemon);
     }
 

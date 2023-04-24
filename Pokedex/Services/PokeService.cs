@@ -53,7 +53,6 @@ public class PokeService : IPokeService
             Next = pokemons.OrderBy(p => p.Numero)
                 .FirstOrDefault(p => p.Numero > Numero),
         };
-        poke.Tipos = GetTipos();
         return poke;
     }
     public Tipo GetTipo(string Nome)
